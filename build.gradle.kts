@@ -13,6 +13,8 @@ dependencies {
     implementation("com.h2database:h2:2.2.220")
     testImplementation("org.junit.jupiter:junit-jupiter:5.10.3")
     testRuntimeOnly("org.junit.platform:junit-platform-launcher")
+    testImplementation("junit:junit:4.13.2")
+
 }
 
 java {
