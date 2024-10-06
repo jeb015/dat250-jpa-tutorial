@@ -8,17 +8,41 @@ public class Pincode {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
+    private String pincode;
+    private Integer count;
+
+    @OneToOne
+    private CreditCard creditCard;
+
     public Long getId() {
         return id;
     }
 
+    public void setId(Long id) {
+        this.id = id;
+    }
+
     public String getCode() {
-        // TODO: implement method!
-        return null;
+        return pincode;
+    }
+
+    public void setCode(String pincode) {
+        this.pincode = pincode;
     }
 
     public Integer getCount() {
-        // TODO: implement method!
-        return null;
+        return count;
+    }
+
+    public void setCount(Integer count) {
+        this.count = count;
+    }
+
+    public CreditCard getCreditCard() {
+        return creditCard;
+    }
+
+    public void setCreditCard(CreditCard creditCard) {
+        this.creditCard = creditCard;
     }
 }
