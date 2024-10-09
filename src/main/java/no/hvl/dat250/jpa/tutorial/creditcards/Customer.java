@@ -11,6 +11,9 @@ public class Customer {
 
     private String name;
 
+    public Customer() {
+    }
+
     @OneToMany
     private Collection<CreditCard> creditCards;
 

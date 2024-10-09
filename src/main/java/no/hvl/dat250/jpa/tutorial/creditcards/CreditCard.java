@@ -13,6 +13,9 @@ public class CreditCard {
     private Integer creditLimit;
     private Integer balance;
 
+    public CreditCard() {
+    }
+
     @ManyToOne
     private Customer customer;
 

@@ -12,6 +12,9 @@ public class Address {
     private String street;
     private Integer number;
 
+    public Address() {
+    }
+
     @ManyToMany(mappedBy ="addresses", cascade = CascadeType.PERSIST)
     private Collection<Customer> owners;
 

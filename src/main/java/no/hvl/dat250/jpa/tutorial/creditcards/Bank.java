@@ -11,6 +11,9 @@ public class Bank {
 
     private String name;
 
+    public Bank() {
+    }
+
     @OneToMany(mappedBy = "bank", cascade = CascadeType.PERSIST)
     private Collection<CreditCard> creditCards;
 
