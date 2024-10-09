@@ -11,10 +11,10 @@ public class Customer {
 
     private String name;
 
-    @OneToMany(mappedBy = "creditCards")
+    @OneToMany
     private Collection<CreditCard> creditCards;
 
-    @ManyToMany(mappedBy = "addresses")
+    @ManyToMany(mappedBy = "addresses", cascade = CascadeType.PERSIST)
     private Collection<Address> addresses;
 
     public Long getId() {

@@ -30,9 +30,10 @@ public class CreditCardsMain {
     Address address = new Address();
     address.setStreet("Inndalsveien");
     address.setNumber(28);
+    address.getOwners().add(customer);
 
     // Set the address for the customer
-    customer.setAddress((Collection<Address>) address);
+    customer.getAddresses().add(address);
 
     // Create a bank
     Bank bank = new Bank();
@@ -47,7 +48,7 @@ public class CreditCardsMain {
     CreditCard card1 = new CreditCard();
     card1.setNumber(12345);
     card1.setBalance(-5000);
-    card1.setCreditLimit(10000);
+    card1.setCreditLimit(-10000);
     card1.setCustomer(customer);  // Associate with customer
     card1.setPincode(pincode);    // Associate with pincode
     card1.setBank(bank);          // Associate with bank
@@ -60,6 +61,9 @@ public class CreditCardsMain {
     card2.setCustomer(customer);  // Associate with customer
     card2.setPincode(pincode);    // Associate with the same pincode
     card2.setBank(bank);          // Associate with bank
+
+    customer.getCreditCards().add(card1);
+    customer.getCreditCards().add(card2);
 
     // Persist all objects
     em.persist(customer);  // Customer is the owner of the address and cards

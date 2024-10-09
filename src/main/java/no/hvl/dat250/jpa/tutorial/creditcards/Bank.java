@@ -11,7 +11,7 @@ public class Bank {
 
     private String name;
 
-    @OneToMany(mappedBy = "creditCards")
+    @OneToMany(mappedBy = "bank", cascade = CascadeType.PERSIST)
     private Collection<CreditCard> creditCards;
 
     public Long getId() {

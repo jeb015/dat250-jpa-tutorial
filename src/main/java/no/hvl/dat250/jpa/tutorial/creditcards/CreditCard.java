@@ -16,19 +16,11 @@ public class CreditCard {
     @ManyToOne
     private Customer customer;
 
-    @OneToOne
+    @OneToOne(cascade = CascadeType.ALL)
     private Pincode pincode;
 
-    @ManyToOne
+    @ManyToOne(cascade = CascadeType.PERSIST)
     private Bank bank;
-
-    public Long getId() {
-        return id;
-    }
-
-    public void setId(Long id) {
-        this.id = id;
-    }
 
     public Integer getNumber() {
         return number;

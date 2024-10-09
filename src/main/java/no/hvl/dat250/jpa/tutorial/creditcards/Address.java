@@ -12,15 +12,11 @@ public class Address {
     private String street;
     private Integer number;
 
-    @ManyToMany(mappedBy ="address")
+    @ManyToMany(mappedBy ="addresses", cascade = CascadeType.PERSIST)
     private Collection<Customer> owners;
 
     public Long getId() {
         return id;
-    }
-
-    public void setId(Long id) {
-        this.id = id;
     }
 
     public String getStreet() {

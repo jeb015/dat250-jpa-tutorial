@@ -2,6 +2,8 @@ package no.hvl.dat250.jpa.tutorial.creditcards;
 
 import jakarta.persistence.*;
 
+import java.util.Collection;
+
 @Entity
 public class Pincode {
     @Id
@@ -11,15 +13,8 @@ public class Pincode {
     private String pincode;
     private Integer count;
 
-    @OneToOne
-    private CreditCard creditCard;
-
     public Long getId() {
         return id;
-    }
-
-    public void setId(Long id) {
-        this.id = id;
     }
 
     public String getCode() {
@@ -36,13 +31,5 @@ public class Pincode {
 
     public void setCount(Integer count) {
         this.count = count;
-    }
-
-    public CreditCard getCreditCard() {
-        return creditCard;
-    }
-
-    public void setCreditCard(CreditCard creditCard) {
-        this.creditCard = creditCard;
     }
 }
