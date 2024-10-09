@@ -13,17 +13,17 @@ public class CreditCard {
     private Integer creditLimit;
     private Integer balance;
 
-    public CreditCard() {
-    }
-
     @ManyToOne
     private Customer customer;
 
-    @OneToOne(cascade = CascadeType.ALL)
+    @ManyToOne(cascade = CascadeType.ALL)
     private Pincode pincode;
 
     @ManyToOne(cascade = CascadeType.PERSIST)
     private Bank bank;
+
+    public CreditCard() {
+    }
 
     public Integer getNumber() {
         return number;

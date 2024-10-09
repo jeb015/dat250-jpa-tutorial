@@ -1,6 +1,8 @@
 package no.hvl.dat250.jpa.tutorial.creditcards;
 
 import jakarta.persistence.*;
+
+import java.util.ArrayList;
 import java.util.Collection;
 
 @Entity
@@ -11,11 +13,12 @@ public class Bank {
 
     private String name;
 
-    public Bank() {
-    }
-
     @OneToMany(mappedBy = "bank", cascade = CascadeType.PERSIST)
     private Collection<CreditCard> creditCards;
+
+    public Bank() {
+        this.creditCards = new ArrayList<CreditCard>();
+    }
 
     public Long getId() {
         return id;

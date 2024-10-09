@@ -13,6 +13,9 @@ public class Pincode {
     private String pincode;
     private Integer count;
 
+    @OneToMany(mappedBy = "pincode", cascade = CascadeType.ALL)
+    private Collection<CreditCard> creditCards;
+
     public Pincode() {
     }
 
