@@ -7,13 +7,17 @@ public class Pincode {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
+
     private String pincode;
     private Integer count;
 
-    public Pincode(String pincode, Integer count, Collection<CreditCard> creditCards) {
+    public Pincode(String pincode, Integer count) {
         this.pincode = pincode;
         this.count = count;
-        this.creditCards = creditCards;
+    }
+
+    public Pincode() {
+
     }
 
     public Long getId() {
@@ -26,5 +30,13 @@ public class Pincode {
 
     public Integer getCount() {
         return count;
+    }
+
+    public void setPincode(String pincode) {
+        this.pincode = pincode;
+    }
+
+    public void setCount(Integer count) {
+        this.count = count;
     }
 }
