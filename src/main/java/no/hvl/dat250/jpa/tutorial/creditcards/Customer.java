@@ -12,7 +12,7 @@ public class Customer {
 
     private String name;
 
-    @OneToMany
+    @OneToMany(mappedBy = "customer")
     private Collection<CreditCard> creditCards;
 
     @ManyToMany
