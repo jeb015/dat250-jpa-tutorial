@@ -8,3 +8,6 @@ but using this instead somehow made assignment 4 easier.
 
 Building my own dockerized application was fairly easy tho, just had minor issues where I
 missmatched my gradle version.
+
+Link to Dockerfile:
+https://github.com/jeb015/pollapp/blob/main/Dockerfile
